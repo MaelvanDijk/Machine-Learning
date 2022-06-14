@@ -152,8 +152,8 @@ class EuroSatDataset(BaseDictDataset):
             # the value is the current List of Paths
             # if there is no value for the key, return an empty List
             # TODO ~ finish these 2 lines of code below
-            key: int = None
-            value: np.ndarray = None
+            key: int = self.name_mapping[class_name]
+            value: np.ndarray = self.dataset.get(key, np.array([]))
 
             # we append the new path to the values we already had
             self.dataset[key] = np.append(value, np.array([path]))
