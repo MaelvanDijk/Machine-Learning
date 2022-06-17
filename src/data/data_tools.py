@@ -151,7 +151,7 @@ class EuroSatDataset(BaseDictDataset):
             # the key is the class integer from name_mapping,
             # the value is the current List of Paths
             # if there is no value for the key, return an empty List
-            # TODO ~ finish these 2 lines of code below
+            # TODO ~ finish these 2 lines of code below.
             key: int = self.name_mapping[class_name]
             value: np.ndarray = self.dataset.get(key, np.array([]))
 
