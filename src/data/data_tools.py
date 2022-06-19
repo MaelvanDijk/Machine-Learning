@@ -136,10 +136,11 @@ class EuroSatDataset(BaseDictDataset):
             paths (List[Path]): filepaths, where the class name is the parent folder
         """
         super().__init__(paths)
+        self.paths = paths
 
     def __len__(self) -> int:
         # TODO ~ about one - two lines of code
-        raise NotImplementedError
+        return len(self.paths)
 
     def process_data(self) -> None:
         for path in tqdm(self.paths):
